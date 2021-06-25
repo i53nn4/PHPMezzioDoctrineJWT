@@ -1,0 +1,48 @@
+version: '3.7'
+services:
+
+  composer:
+    image: composer
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: composer update
+
+  php:
+    build: ./container-build/php
+    image: php_composer
+    container_name: php_composer
+    networks:
+      my-network:
+        ipv4_address: 172.16.242.100
+        ipv6_address: 2001:3984:4091::100
+    depends_on:
+      - db
+    ports:
+      - 9000:9000
+    command: php -S 0.0.0.0:9000 -t public/
+    volumes:
+      - .:/var/www
+
+  db:
+    image: postgres
+    restart: always
+    container_name: postgres
+    networks:
+      my-network:
+        ipv4_address: 172.16.242.101
+        ipv6_address: 2001:3984:4091::101
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test
+    ports:
+      - 5432:5432
+
+networks:
+  my-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.242.0/24
+        - subnet: 2001:3984:4091::/64
