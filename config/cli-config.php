@@ -5,7 +5,7 @@ use Doctrine\ORM\EntityManager;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-/** @var Interop\Container\ContainerInterface $container */
+/** @var Psr\Container\ContainerInterface $container */
 $container = require __DIR__ . '/container.php';
 
 /** @var EntityManager $entityManager */
