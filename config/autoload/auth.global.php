@@ -8,7 +8,7 @@ return [
                 'aud' => 'https:localdomain.dev',
             ],
             // A DateTime interval dictating how long the token should be valid for
-            'expiryPeriod' => 'P10D',
+            'expiryPeriod' => 'PT60M',
             'leeway' => 60,
             'allowedAlgorithms' => [
                 'HS256'
