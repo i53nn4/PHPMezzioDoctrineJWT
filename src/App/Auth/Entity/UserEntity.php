@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Auth\Entity\Sis;
+namespace App\Auth\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Laminas\Hydrator\ClassMethodsHydrator;
@@ -13,7 +13,7 @@ use Laminas\Hydrator\ClassMethodsHydrator;
  * @ORM\Table(name="sis.usuarios")
  * @ORM\Entity(repositoryClass="App\Auth\Repository\UserRepository")
  */
-class User
+class UserEntity
 {
     /**
      * @var int

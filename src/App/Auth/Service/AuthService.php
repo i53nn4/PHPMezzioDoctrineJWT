@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Auth\Service;
 
-use App\Auth\Entity\Sis\User;
+use App\Auth\Entity\UserEntity;
 use App\Auth\Repository\UserRepository;
 use App\Base\Service\ServiceAbstract;
 use Exception;
@@ -14,7 +14,7 @@ class AuthService extends ServiceAbstract
     /**
      * @var string
      */
-    protected string $entity = User::class;
+    protected string $entity = UserEntity::class;
 
     /**
      * @param string $login
