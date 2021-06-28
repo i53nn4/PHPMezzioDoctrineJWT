@@ -52,7 +52,7 @@ class ConfigProvider
                 Model\Handler\DeleteTableHandler::class => Model\Factory\DeleteTableHandlerFactory::class,
 
                 // Service
-                Model\Service\TableService::class => Model\Service\Factory\TableServiceFactory::class,
+                Model\Service\TableService::class => Model\Factory\TableServiceFactory::class,
             ],
         ];
     }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Model\Service\Factory;
+namespace App\Model\Factory;
 
 use App\Model\Service\TableService;
 use Doctrine\ORM\EntityManager;
