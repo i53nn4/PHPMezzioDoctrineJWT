@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace AppTest\Handler;
 
-use App\Handler\HomePageHandler;
-use Laminas\Diactoros\Response\HtmlResponse;
+use App\Home\Handler\HomePageHandler;
 use Laminas\Diactoros\Response\JsonResponse;
 use Mezzio\Router\RouterInterface;
-use Mezzio\Template\TemplateRendererInterface;
 use PHPUnit\Framework\TestCase;
-use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
@@ -23,10 +20,10 @@ class HomePageHandlerTest extends TestCase
     use ProphecyTrait;
 
     /** @var ContainerInterface|ObjectProphecy */
-    protected $container;
+    protected ObjectProphecy|ContainerInterface $container;
 
     /** @var RouterInterface|ObjectProphecy */
-    protected $router;
+    protected RouterInterface|ObjectProphecy $router;
 
     protected function setUp(): void
     {
@@ -34,37 +31,17 @@ class HomePageHandlerTest extends TestCase
         $this->router    = $this->prophesize(RouterInterface::class);
     }
 
-    public function testReturnsJsonResponseWhenNoTemplateRendererProvided()
+    public function testReturnsJsonResponse()
     {
         $homePage = new HomePageHandler(
             get_class($this->container->reveal()),
             $this->router->reveal(),
-            null
-        );
-        $response = $homePage->handle(
-            $this->prophesize(ServerRequestInterface::class)->reveal()
-        );
-
-        self::assertInstanceOf(JsonResponse::class, $response);
-    }
-
-    public function testReturnsHtmlResponseWhenTemplateRendererProvided()
-    {
-        $renderer = $this->prophesize(TemplateRendererInterface::class);
-        $renderer
-            ->render('app::home-page', Argument::type('array'))
-            ->willReturn('');
-
-        $homePage = new HomePageHandler(
-            get_class($this->container->reveal()),
-            $this->router->reveal(),
-            $renderer->reveal()
         );
 
         $response = $homePage->handle(
             $this->prophesize(ServerRequestInterface::class)->reveal()
         );
 
-        self::assertInstanceOf(HtmlResponse::class, $response);
+        self::assertInstanceOf(JsonResponse::class, $response);
     }
 }

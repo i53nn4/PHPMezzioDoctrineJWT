@@ -1712,16 +1712,16 @@
         },
         {
             "name": "laminas/laminas-hydrator",
-            "version": "3.2.0",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-hydrator.git",
-                "reference": "f0336699910478cc45c7e34ca0fc83bf118e48bc"
+                "reference": "41aaccb9a0b8e25b1742f78427aa90504a6eb1cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-hydrator/zipball/f0336699910478cc45c7e34ca0fc83bf118e48bc",
-                "reference": "f0336699910478cc45c7e34ca0fc83bf118e48bc",
+                "url": "https://api.github.com/repos/laminas/laminas-hydrator/zipball/41aaccb9a0b8e25b1742f78427aa90504a6eb1cd",
+                "reference": "41aaccb9a0b8e25b1742f78427aa90504a6eb1cd",
                 "shasum": ""
             },
             "require": {
@@ -1782,7 +1782,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2020-10-06T19:45:29+00:00"
+            "time": "2021-06-28T15:12:05+00:00"
         },
         {
             "name": "laminas/laminas-json",
@@ -5394,12 +5394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "ac0d045cdd1a9f1c87a0225a1dcda2bfb71be924"
+                "reference": "eb3ee0f5774a542e912e3eb7670dcbf1ef24c1a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/ac0d045cdd1a9f1c87a0225a1dcda2bfb71be924",
-                "reference": "ac0d045cdd1a9f1c87a0225a1dcda2bfb71be924",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/eb3ee0f5774a542e912e3eb7670dcbf1ef24c1a8",
+                "reference": "eb3ee0f5774a542e912e3eb7670dcbf1ef24c1a8",
                 "shasum": ""
             },
             "conflict": {
@@ -5593,8 +5593,8 @@
                 "scheb/two-factor-bundle": ">=0,<3.26|>=4,<4.11",
                 "sensiolabs/connect": "<4.2.3",
                 "serluck/phpwhois": "<=4.2.6",
-                "shopware/core": "<=6.3.5.2",
-                "shopware/platform": "<=6.3.5.2",
+                "shopware/core": "<=6.4.1",
+                "shopware/platform": "<=6.4.1",
                 "shopware/production": "<=6.3.5.2",
                 "shopware/shopware": "<=5.6.9",
                 "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
@@ -5760,7 +5760,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-24T09:02:34+00:00"
+            "time": "2021-06-28T17:35:52+00:00"
         },
         {
             "name": "sebastian/cli-parser",
