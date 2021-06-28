@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Model\Entity\Schema;
+namespace App\Model\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Laminas\Hydrator\ClassMethodsHydrator;
@@ -13,7 +13,7 @@ use Laminas\Hydrator\ClassMethodsHydrator;
  * @ORM\Table(name="test.table")
  * @ORM\Entity(repositoryClass="App\Model\Repository\TableRepository")
  */
-class Table
+class TableEntity
 {
     /**
      * @var int
@@ -87,9 +87,9 @@ class Table
 
     /**
      * @param string $descricao
-     * @return Table
+     * @return TableEntity
      */
-    public function setDescricao(string $descricao): Table
+    public function setDescricao(string $descricao): TableEntity
     {
         $this->descricao = $descricao;
         return $this;
@@ -105,9 +105,9 @@ class Table
 
     /**
      * @param string $label
-     * @return Table
+     * @return TableEntity
      */
-    public function setLabel(string $label): Table
+    public function setLabel(string $label): TableEntity
     {
         $this->label = $label;
         return $this;
@@ -122,9 +122,9 @@ class Table
     }
 
     /**
-     * @return Table
+     * @return TableEntity
      */
-    public function setCreatedAt(): Table
+    public function setCreatedAt(): TableEntity
     {
         $this->createdAt = new \DateTime('now');
         return $this;
@@ -139,9 +139,9 @@ class Table
     }
 
     /**
-     * @return Table
+     * @return TableEntity
      */
-    public function setUpdatedAt(): Table
+    public function setUpdatedAt(): TableEntity
     {
         $this->updatedAt = new \DateTime('now');
         return $this;
@@ -156,9 +156,9 @@ class Table
     }
 
     /**
-     * @return Table
+     * @return TableEntity
      */
-    public function setDeletedAt(): Table
+    public function setDeletedAt(): TableEntity
     {
         $this->deletedAt = new \DateTime('now');
         return $this;
