@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Model\Handler\Factory;
+namespace App\Model\Factory;
 
 use App\Base\Handler\HandlerAbstract;
 use App\Model\Handler\DeleteTableHandler;

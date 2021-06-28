@@ -45,11 +45,11 @@ class ConfigProvider
                 Auth\Service\AuthService::class => Auth\Service\Factory\AuthServiceFactory::class,
 
                 // Handler
-                Model\Handler\ListAllTableHandler::class => Model\Handler\Factory\ListAllTableHandlerFactory::class,
-                Model\Handler\ListTableHandler::class => Model\Handler\Factory\ListTableHandlerFactory::class,
-                Model\Handler\CreateTableHandler::class => Model\Handler\Factory\CreateTableHandlerFactory::class,
-                Model\Handler\UpdateTableHandler::class => Model\Handler\Factory\UpdateTableHandlerFactory::class,
-                Model\Handler\DeleteTableHandler::class => Model\Handler\Factory\DeleteTableHandlerFactory::class,
+                Model\Handler\ListAllTableHandler::class => Model\Factory\ListAllTableHandlerFactory::class,
+                Model\Handler\ListTableHandler::class => Model\Factory\ListTableHandlerFactory::class,
+                Model\Handler\CreateTableHandler::class => Model\Factory\CreateTableHandlerFactory::class,
+                Model\Handler\UpdateTableHandler::class => Model\Factory\UpdateTableHandlerFactory::class,
+                Model\Handler\DeleteTableHandler::class => Model\Factory\DeleteTableHandlerFactory::class,
 
                 // Service
                 Model\Service\TableService::class => Model\Service\Factory\TableServiceFactory::class,

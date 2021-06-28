@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Model\Handler\Factory;
+namespace App\Model\Factory;
 
 use App\Base\Handler\HandlerAbstract;
-use App\Model\Handler\UpdateTableHandler;
+use App\Model\Handler\ListTableHandler;
 use Psr\Container\ContainerInterface;
 
-class UpdateTableHandlerFactory
+class ListTableHandlerFactory
 {
     /**
      * @param ContainerInterface $container
@@ -16,6 +16,6 @@ class UpdateTableHandlerFactory
      */
     public function __invoke(ContainerInterface $container): HandlerAbstract
     {
-        return new UpdateTableHandler($container);
+        return new ListTableHandler($container);
     }
 }
