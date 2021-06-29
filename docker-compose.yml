@@ -16,7 +16,7 @@ services:
       my-network:
         ipv4_address: 172.16.242.100
         ipv6_address: 2001:3984:4091::100
-    depends_on:
+    links:
       - db
     ports:
       - 9000:9000
