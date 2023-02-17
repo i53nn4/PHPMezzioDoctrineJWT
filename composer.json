@@ -42,7 +42,7 @@
         "ext-pdo": "*",
         "composer/package-versions-deprecated": "^1.11.99.2",
         "doctrine/orm": "^2.9.3",
-        "firebase/php-jwt": "^5.4",
+        "firebase/php-jwt": "^6.0",
         "laminas/laminas-component-installer": "^2.5.0",
         "laminas/laminas-config-aggregator": "^1.5.0",
         "laminas/laminas-diactoros": "^2.6.0",
